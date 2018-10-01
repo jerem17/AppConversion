@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppTest"
+             x:Class="AppTest.MainPage"
+             Title="Acceuil">
+
+    <!-- Menu toolbar -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Menu" Text="Menu" Icon="ic_menu_grey600_36dp.png" Activated="ToolbarItem_Activated"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Saisissez la somme que vous souhaitez convertir" TextColor="Black" HorizontalTextAlignment="Center" Margin="10"/>
+        <Entry x:Name="Money" AutomationId="ValueMoney" Margin ="3" Keyboard="Numeric" Placeholder="Entrer le montant."/>
+        <Label Text="Choisissez la monnaie !" TextColor="Black" HorizontalTextAlignment="Center" />
+
+        <Grid Padding="5,0" RowSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Dollar" AutomationId="DollarButton" Text="$" TextColor="Red" Grid.Row="0" Grid.Column="0" BackgroundColor="AliceBlue" BorderColor="Silver" BorderWidth="1"/>
+            <Button x:Name="Livre" AutomationId="LivreButton" Text="£" TextColor="Blue" Grid.Row="0" Grid.Column="1" BackgroundColor="AliceBlue" BorderColor="Silver" BorderWidth="1"/>
+        </Grid>
+
+        <Button x:Name="reset" AutomationId="ResetButton"  Text="Reset" TextColor="Azure" HorizontalOptions="Center" />
+        <Label x:Name="result" AutomationId="ResultLabel" HorizontalOptions="Center"/>
+        <Button x:Name="about" Text="About" TextColor="Black" VerticalOptions="EndAndExpand" Clicked="About_OnClicked"/>
+
+    </StackLayout>
+
+
+</ContentPage>
