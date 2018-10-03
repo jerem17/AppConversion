@@ -39,7 +39,12 @@ namespace UITest
 
             //Assert (verify test)
             var appResult = app.Query("ResultLabel").First(result => result.Text == "5.8 $");
-            app.Screenshot("dollqr screen");
+        //    app.Screenshot("dollqr screen");
+
+            FileInfo fileInfo = app.Screenshot("Dollar_screen");
+            string destinationPath = string.Format(@"/Users/Shared/Jenkins/Home/workspace/screenshot{0}", fileInfo.Name);
+
+            fileInfo.MoveTo(destinationPath);
 
             Assert.IsTrue(appResult != null, "Dollar conversion don't work !");
 
