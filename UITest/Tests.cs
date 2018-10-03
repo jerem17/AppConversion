@@ -8,7 +8,8 @@ using Xamarin.UITest.Queries;
 namespace UITest
 {
     [TestFixture(Platform.Android)]
- //   [TestFixture(Platform.iOS)]
+    //   [TestFixture(Platform.iOS)]
+
     public class Tests
     {
         IApp app;
@@ -57,7 +58,7 @@ namespace UITest
             app.Tap("LivreButton");
             var appResult = app.Query("ResultLabel").First(result => result.Text == "522.207 £");
             Assert.IsTrue(appResult != null, "Livre conversion don't work");
-            app.Screenshot("livre screen");
+            //app.Screenshot("livre screen");
 
         }
         [Test]
@@ -68,7 +69,7 @@ namespace UITest
             app.Tap("LivreButton");
             app.Tap("ResetButton");
             var appResult = app.Query(x => x.Marked("ValueMoney")?.Invoke("placeholder"))?.FirstOrDefault()?.ToString();
-            app.Screenshot("reset screen");
+           // app.Screenshot("reset screen");
 
             Assert.IsTrue(appResult != null, "Reset button don't work");
 
