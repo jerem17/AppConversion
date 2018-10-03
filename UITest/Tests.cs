@@ -31,7 +31,7 @@ namespace UITest
             /*Test si la conversion en dollar marche*/
             /*AutomationID sert a créer un ID pour les testes */
             
-            //Arrange (setup test))
+            //Arrange (setup test)
             app.EnterText("ValueMoney", "5"); //Entre 5 dans l'entry id : ValueMoney
 
             //Act (perform test)
