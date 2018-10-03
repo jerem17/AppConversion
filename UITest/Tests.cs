@@ -39,6 +39,8 @@ namespace UITest
 
             //Assert (verify test)
             var appResult = app.Query("ResultLabel").First(result => result.Text == "5.8 $");
+            app.Screenshot("dollqr screen");
+
             Assert.IsTrue(appResult != null, "Dollar conversion don't work !");
 
         }
@@ -50,7 +52,7 @@ namespace UITest
             app.Tap("LivreButton");
             var appResult = app.Query("ResultLabel").First(result => result.Text == "522.207 £");
             Assert.IsTrue(appResult != null, "Livre conversion don't work");
-            app.Screenshot("when is finish");
+            app.Screenshot("livre screen");
 
         }
         [Test]
@@ -61,6 +63,7 @@ namespace UITest
             app.Tap("LivreButton");
             app.Tap("ResetButton");
             var appResult = app.Query(x => x.Marked("ValueMoney")?.Invoke("placeholder"))?.FirstOrDefault()?.ToString();
+            app.Screenshot("reset screen");
 
             Assert.IsTrue(appResult != null, "Reset button don't work");
 
