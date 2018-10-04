@@ -18,7 +18,7 @@ namespace UITest
        //           return ConfigureApp.Android.DeviceSerial("420088e7f4f1b300").ApkFile("E:/Xamarin Stage/AppConversionUITest/AppTest/AppTest/AppTest.Android/bin/Debug/com.companyname.AppTest.apk").StartApp();
 
             }
-            return ConfigureApp.iOS.DeviceIdentifier("F351AFBF-2AED-4D73-8467-68AAC33E5D2B").AppBundle("/Users/Shared/Jenkins/Home/workspace/build_project/AppTest/AppTest.iOS/bin/iPhoneSimulator/Debug/AppTest.iOS.app").StartApp();
+            return ConfigureApp.iOS.DeviceIdentifier("4D74D7C0-101F-4012-B27C-DA158B6691CD").AppBundle("/Users/Shared/Jenkins/Home/workspace/build_project/AppTest/AppTest.iOS/bin/iPhoneSimulator/Debug/AppTest.iOS.app").PreferIdeSettings().StartApp();
         }
     }
 }
