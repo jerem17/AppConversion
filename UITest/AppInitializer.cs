@@ -19,8 +19,7 @@ namespace UITest
 
             }
 
-            return ConfigureApp.iOS.AppBundle("AppTest.iOS").StartApp();
-            // return ConfigureApp.iOS.AppBundle("PATH TO IPA").StartApp();
+            return ConfigureApp.iOS.AppBundle("/Users/Shared/Jenkins/Home/workspace/build_project/AppTest/AppTest.iOS/bin/iPhoneSimulator/Debug/AppTest.iOS.app").StartApp();
         }
     }
 }
