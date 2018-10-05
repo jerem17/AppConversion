@@ -12,27 +12,19 @@ namespace AppTest
         public MainPage()
         {
             InitializeComponent();
-            //ToolbarItems.Add(new ToolbarItem("Burger", "ic_menu_grey600_36dp.png", () =>
-            //{
-
-            //}));
-
-            Dollar.Clicked += (s, e) => Convert_monnaie(Money, 1);
-            Livre.Clicked += (s, e) => Convert_monnaie(Money, 2);
-            reset.Clicked += (s, e) => Money.Text = "";
 
         }
 
 
-        public void Convert_monnaie(Entry numbers, int choose_money)
+        public void Convert_monnaie(int choose_money)
         {
             double resultat = 0;
             double dollar = 1.16;
             double livre = 0.90;
 
             //    double number = Math.Round(GetValue);
-            double.TryParse(numbers.Text, out var valeur); // Convertie une string en double
-            if (valeur == 0)
+             // Convertie une string en double
+            if (!double.TryParse(Money.Text, out var valeur))
             {
                 result.Text = "Veuillez entrer un montant valide !";
                 return;
@@ -60,11 +52,20 @@ namespace AppTest
         {
             DisplayAlert("ToolbarItem", "Menu", "OOKKK");
         }
-    }
-    public class HyperlinkLabel : Label
-    {
-        public HyperlinkLabel()
+
+        private void Reset_OnClicked(object sender, EventArgs e)
         {
+            Money.Text = "";
+        }
+
+        private void Dollar_OnClicked(object sender, EventArgs e)
+        {
+            Convert_monnaie(1);
+        }
+
+        private void Livre_OnClicked(object sender, EventArgs e)
+        {
+           Convert_monnaie(2);
         }
     }
 }

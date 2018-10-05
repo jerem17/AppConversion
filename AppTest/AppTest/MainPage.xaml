@@ -24,11 +24,11 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button x:Name="Dollar" AutomationId="DollarButton" Text="$" TextColor="Red" Grid.Row="0" Grid.Column="0" BackgroundColor="AliceBlue" BorderColor="Silver" BorderWidth="1"/>
-            <Button x:Name="Livre" AutomationId="LivreButton" Text="£" TextColor="Blue" Grid.Row="0" Grid.Column="1" BackgroundColor="AliceBlue" BorderColor="Silver" BorderWidth="1"/>
+            <Button x:Name="Dollar" AutomationId="DollarButton" Text="$" TextColor="Red" Grid.Row="0" Grid.Column="0" BackgroundColor="AliceBlue" BorderColor="Silver" BorderWidth="1" Clicked="Dollar_OnClicked"/>
+            <Button x:Name="Livre" AutomationId="LivreButton" Text="£" TextColor="Blue" Grid.Row="0" Grid.Column="1" BackgroundColor="AliceBlue" BorderColor="Silver" BorderWidth="1" Clicked="Livre_OnClicked"/>
         </Grid>
 
-        <Button x:Name="reset" AutomationId="ResetButton"  Text="Reset" TextColor="Black" HorizontalOptions="Center" />
+        <Button x:Name="reset" AutomationId="ResetButton"  Text="Reset" TextColor="Black" HorizontalOptions="Center" Clicked="Reset_OnClicked" />
         <Label x:Name="result" AutomationId="ResultLabel" HorizontalOptions="Center"/>
         <Button x:Name="about" Text="About" TextColor="Black" VerticalOptions="EndAndExpand" Clicked="About_OnClicked"/>
 
