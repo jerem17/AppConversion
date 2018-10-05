@@ -18,7 +18,9 @@ namespace UITest
        //           return ConfigureApp.Android.DeviceSerial("420088e7f4f1b300").ApkFile("E:/Xamarin Stage/AppConversionUITest/AppTest/AppTest/AppTest.Android/bin/Debug/com.companyname.AppTest.apk").StartApp();
 
             }
-            return ConfigureApp.iOS.AppBundle("/Users/Shared/Jenkins/Home/workspace/build_project/AppTest/AppTest.iOS/bin/iPhoneSimulator/Debug/AppTest.iOS.app").PreferIdeSettings().StartApp(Xamarin.UITest.Configuration.AppDataMode.DoNotClear);
+            return ConfigureApp.iOS.AppBundle("./AppTest/AppTest.iOS/bin/iPhoneSimulator/Debug/AppTest.iOS.app").PreferIdeSettings().StartApp(Xamarin.UITest.Configuration.AppDataMode.DoNotClear);
+ //           return ConfigureApp.iOS.AppBundle("~/Home/workspace/build_project/AppTest/AppTest.iOS/bin/iPhoneSimulator/Debug/AppTest.iOS.app").PreferIdeSettings().StartApp(Xamarin.UITest.Configuration.AppDataMode.DoNotClear);
+
         }
     }
 }

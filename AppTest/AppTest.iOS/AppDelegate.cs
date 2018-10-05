@@ -23,7 +23,7 @@ namespace AppTest.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             #if DEBUG
-        //    Xamarin.Calabash.Start();
+            Xamarin.Calabash.Start();
             #endif
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
