@@ -14,7 +14,7 @@ namespace UITest
  //                   .Android
    //                 .ApkFile("E:/Xamarin Stage/Test UI automatique/AppforUItest/AppTest/AppTest/AppTest.Android/bin/Debug/com.companyname.App3-Signed.apk")
     //                .StartApp();
-                 return ConfigureApp.Android.EnableLocalScreenshots().ApkFile("/Users/Shared/Jenkins/Home/workspace/build_project/AppTest/AppTest.Android/bin/Debug/com.companyname.AppTest.apk").StartApp(Xamarin.UITest.Configuration.AppDataMode.DoNotClear);
+                 return ConfigureApp.Android.EnableLocalScreenshots().ApkFile("./AppTest/AppTest.Android/bin/Debug/com.companyname.AppTest.apk").StartApp(Xamarin.UITest.Configuration.AppDataMode.DoNotClear);
        //           return ConfigureApp.Android.DeviceSerial("420088e7f4f1b300").ApkFile("E:/Xamarin Stage/AppConversionUITest/AppTest/AppTest/AppTest.Android/bin/Debug/com.companyname.AppTest.apk").StartApp();
 
             }
