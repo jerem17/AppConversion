@@ -19,7 +19,7 @@ namespace UITest
 
             }
             //return ConfigureApp.iOS.DeviceIdentifier("3BA886C2-B528-4965-BEBD-EEFBAD5BC177").AppBundle("./AppTest/AppTest.iOS/bin/iPhoneSimulator/Debug/AppTest.iOS.app").PreferIdeSettings().StartApp(Xamarin.UITest.Configuration.AppDataMode.DoNotClear);
-                       return ConfigureApp.iOS.DeviceIdentifier("3BA886C2-B528-4965-BEBD-EEFBAD5BC177").AppBundle("/Users/Shared/Jenkins/Home/workspace/build_project/AppTest/AppTest.iOS/bin/iPhoneSimulator/Debug/AppTest.iOS.app").PreferIdeSettings().StartApp(Xamarin.UITest.Configuration.AppDataMode.DoNotClear);
+                       return ConfigureApp.iOS.DeviceIdentifier("3BA886C2-B528-4965-BEBD-EEFBAD5BC177").AppBundle("~/Home/workspace/build_project/AppTest/AppTest.iOS/bin/iPhoneSimulator/Debug/AppTest.iOS.app").PreferIdeSettings().StartApp(Xamarin.UITest.Configuration.AppDataMode.DoNotClear);
 
         }
     }
