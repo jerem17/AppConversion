@@ -65,9 +65,9 @@ namespace UITest
         public void Reset_Button_Work()
         {
 
-            app.EnterText("ValueMoney", "87883949384");
+            app.EnterText("ValueMoney", "87883");
             app.Tap("LivreButton");
-            app.Tap("ResetButton");
+    //        app.Tap("ResetButton");
             //var appResult = app.Query(x => x.Marked("ValueMoney")?.Invoke("placeholder"))?.FirstOrDefault()?.ToString();
             var appResult = "prout";
             // app.Screenshot("reset screen");
