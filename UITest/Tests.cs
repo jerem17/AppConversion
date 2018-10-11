@@ -72,8 +72,7 @@ namespace UITest
             var appResult = "prout";
             // app.Screenshot("reset screen");
 
-            Assert.IsTrue(appResult != null, "Reset button don't work");
-
+            Assert.IsTrue(appResult != null, "Reset button don't work");            
         }
     }
 }
