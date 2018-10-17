@@ -26,19 +26,19 @@ namespace AppTest
              // Convertie une string en double
             if (!double.TryParse(Money.Text, out var valeur))
             {
-                result.Text = "Veuillez entrer un montant valide !";
+                Result.Text = "Veuillez entrer un montant valide !";
                 return;
             }
 
             if (choose_money == 1)
             {
                 resultat = valeur * dollar;
-                result.Text = $"{resultat} $";
+                Result.Text = $"{resultat} $";
             }
             else if (choose_money == 2)
             {
                 resultat = valeur * livre;
-                result.Text = $"{resultat} £";
+                Result.Text = $"{resultat} £";
             }
             
         }

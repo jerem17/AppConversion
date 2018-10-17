@@ -28,25 +28,16 @@ namespace UITest
 
         [Test]
         public void Dollar_Work_Conversion()
-        {
-            /*Test si la conversion en dollar marche*/
-            /*AutomationID sert a créer un ID pour les testes */
-            
+        {            
             //Arrange (setup test)
-            app.EnterText("ValueMoney", "5"); //Entre 5 dans l'entry id : ValueMoney
+            app.EnterText("ValueMoney", "5");
 
             //Act (perform test)
             app.Tap("DollarButton");
             
             //Assert (verify test)
             var appResult = app.Query("ResultLabel").First(result => result.Text == "5.8 $");
-        //    app.Screenshot("dollqr screen");
-        /*
-            FileInfo fileInfo = app.Screenshot("Dollar_screen");
-            string destinationPath = string.Format(@"/Users/Shared/Jenkins/Home/workspace/screenshot{0}", fileInfo.Name);
-
-            fileInfo.MoveTo(destinationPath);*/
-
+            app.Screenshot("Dollar_Conversion_Screen");
             Assert.IsTrue(appResult != null, "Dollar conversion don't work !");
 
         }
@@ -59,6 +50,11 @@ namespace UITest
             var appResult = app.Query("ResultLabel").First(result => result.Text == "522.207 £");
             Assert.IsTrue(appResult != null, "Livre conversion don't work");
             //app.Screenshot("livre screen");
+            /*
+    FileInfo fileInfo = app.Screenshot("Dollar_screen");
+    string destinationPath = string.Format(@"/Users/Shared/Jenkins/Home/workspace/screenshot{0}", fileInfo.Name);
+
+    fileInfo.MoveTo(destinationPath);*/
 
         }
         [Test]
