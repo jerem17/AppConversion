@@ -15,15 +15,12 @@ namespace AppTest
 
         }
 
-
         public void Convert_monnaie(int choose_money)
         {
             double resultat = 0;
             double dollar = 1.16;
             double livre = 0.90;
 
-            //    double number = Math.Round(GetValue);
-             // Convertie une string en double
             if (!double.TryParse(Money.Text, out var valeur))
             {
                 Result.Text = "Veuillez entrer un montant valide !";

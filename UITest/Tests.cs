@@ -49,7 +49,7 @@ namespace UITest
             var appResult = app.Query("ResultLabel").First(result => result.Text == "522.207 £");
             Assert.IsTrue(appResult != null, "Livre conversion don't work");
 
-            /*
+            /* #-- Take screenshot and choose name/path --#
             FileInfo fileInfo = app.Screenshot("Dollar_screen");
             string destinationPath = string.Format(@"/Users/Shared/Jenkins/Home/workspace/screenshot{0}", fileInfo.Name);
             fileInfo.MoveTo(destinationPath);
