@@ -63,9 +63,9 @@ namespace UITest
 
             app.EnterText("ValueMoney", "87883");
             app.Tap("LivreButton");
-    //        app.Tap("ResetButton");
-            //var appResult = app.Query(x => x.Marked("ValueMoney")?.Invoke("placeholder"))?.FirstOrDefault()?.ToString();
-            var appResult = "prout";
+            app.Tap("ResetButton");
+            var appResult = app.Query(x => x.Marked("ValueMoney")?.Invoke("placeholder"))?.FirstOrDefault()?.ToString();
+         //   var appResult = "prout";
             // app.Screenshot("reset screen");
 
             Assert.IsTrue(appResult != null, "Reset button don't work");            
